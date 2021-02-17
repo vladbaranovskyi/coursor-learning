@@ -9,7 +9,7 @@ console.log(`
   Максимальная цена = ${(Math.max (tshirtPrice, coatPrice, shoesPrice))}
   Минимальная цена = ${(Math.min (tshirtPrice, coatPrice, shoesPrice))}
   Стоимость всех товаров = ${(productsPrice)}
-  Стоимость всех товаров без копеек (океругленная в меньшую сторону) = ${(Math.floor(tshirtPrice) + Math.floor(coatPrice) + Math.floor(shoesPrice))}
+  Стоимость всех товаров без копеек (округленная в меньшую сторону) = ${(Math.floor(tshirtPrice) + Math.floor(coatPrice) + Math.floor(shoesPrice))}
   Сумма товаров округленная до сотен = ${(Math.round(productsPrice / 100) * 100)}
   Являеться ли сума всех товаров (округленная в меньшую сторону) парным числом? = ${((Math.floor(tshirtPrice) + Math.floor(coatPrice) + Math.floor(shoesPrice)) % 2 == 0)}
   Здача при оплате купюрой 500 =  ${((500 - productsPrice).toFixed(2))}
