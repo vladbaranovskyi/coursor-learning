@@ -28,7 +28,7 @@ console.log(roundSum);
 const isSumPaired = ((Math.floor(tshirtPrice) + Math.floor(coatPrice) + Math.floor(shoesPrice)) % 2 == 0);
 console.log(isSumPaired);
 
-//Здача при оплате 500
+//Сдача при оплате 500
 const change = ((500 - productsPrice).toFixed(2));
 console.log(change);
 
@@ -53,7 +53,7 @@ document.writeln(`
   Стоимость всех товаров без копеек (округленная в меньшую сторону): ${(roundPrice)} <br>
   Сумма товаров округленная до сотен: ${(roundSum)} <br>
   Является ли сумма всех товаров (округленная в меньшую сторону) парным числом? - ${(isSumPaired)} <br>
-  Здача при оплате купюрой 500:  ${(change)} <br>
+  Сдача при оплате купюрой 500:  ${(change)} <br>
   Среднее значение цен до 2 знака после запятой: ${(meanPrice)} <br>
   Сумма к оплате с учетом случайной скидки: ${(discountPrice)} <br>
   Чистая прибыль при оплате с случайной скидкой: ${(profit)}
