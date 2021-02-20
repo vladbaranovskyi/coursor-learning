@@ -3,6 +3,7 @@ const coatPrice = 123.965;
 const shoesPrice = 90.2345;
 
 const discount = Math.random();
+const payment = 500;
 
 //Максимальная цена
 const maxPrice = (Math.max (tshirtPrice, coatPrice, shoesPrice));
@@ -25,11 +26,11 @@ const roundSum = (Math.round(productsPrice / 100) * 100);
 console.log(roundSum);
 
 //Является ли сумма всех товаров парным числом
-const isSumPaired = ((Math.floor(tshirtPrice) + Math.floor(coatPrice) + Math.floor(shoesPrice)) % 2 == 0);
+const isSumPaired = ((roundPrice % 2) == 0);
 console.log(isSumPaired);
 
 //Сдача при оплате 500
-const change = ((500 - productsPrice).toFixed(2));
+const change = ((payment - productsPrice).toFixed(2));
 console.log(change);
 
 //Среднее значение цен до 2 знака после запятой
@@ -41,7 +42,7 @@ const discountPrice = ((productsPrice-(productsPrice * discount)).toFixed(2));
 console.log(discountPrice);
 
 //Чистая прибыль при оплате с случайной скидкой
-const profit = ((productsPrice/2) - (productsPrice * discount));
+const profit = (((productsPrice/2) - (productsPrice * discount)).toFixed(2));
 console.log(profit);
 
 
