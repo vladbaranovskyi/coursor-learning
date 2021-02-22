@@ -12,9 +12,9 @@ do {
 } while (!Number.isInteger(M) || isNaN(M))
 console.log(M);
 
-let isParedCount = confirm ("Пропускать парные числа при сложении?");
+let isParedCount = confirm ("Пропускать парные числа?");
 
-for (var i = N; i <= M; i++)
+for (let i = N; i <= M; i++)
   {
     if (isParedCount == true) {
       if (i % 2 !== 0) {
@@ -26,4 +26,4 @@ for (var i = N; i <= M; i++)
     }
   }
 
-document.writeln(`Сумма чисел равна: ${sum}`)
+document.writeln(`Сумма чисел равна ${sum}`)
