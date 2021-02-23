@@ -13,7 +13,7 @@ do {
 console.log(M);
 
 while (M < N) {
-  M = +prompt ("M должно быть больше N, введите число M");
+  M = +prompt (`Число M должно быть больше ${N}, введите число M`);
 }
 
 let isParedCount = confirm ("Пропускать парные числа?");
