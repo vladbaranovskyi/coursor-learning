@@ -12,7 +12,7 @@ do {
 } while (!Number.isInteger(M) || isNaN(M));
 console.log(M);
 
-while (M < N) {
+if (M < N) {
   M = +prompt (`Число M должно быть больше ${N}, введите число M`);
 }
 
