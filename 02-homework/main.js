@@ -15,8 +15,7 @@ function getRandomNumber(minNumber, maxNumber) {
   return  Math.floor (Math.random() * (maxNumber - minNumber) + 1);
 }
 
-function getTax (salary) {
-  tax = 19.5;
+function getTax (salary, tax) {
   return  Math.floor (salary - (salary/100 * tax));
 }
 
@@ -43,7 +42,7 @@ document.writeln(
   `Функция №1: ${getMaxDigit(468542341)}<br>
   Функция №2: ${toUСFirst("maXiMuS")}<br>
   Функция №3: ${getRandomNumber(10, 100)}<br>
-  Функция №4: ${getTax(1000)}<br>
+  Функция №4: ${getTax(1000, 19.5)}<br>
   Функция №5: ${getRandomPassword(5)}<br>
   Функция №6: ${countLetter("Блаблабла", "б")}<br>
   `);
