@@ -6,7 +6,7 @@ function getMaxDigit (n) {
   }
 }
 
-function changeName (name) {
+function formatName (name) {
   return  name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
 
@@ -39,7 +39,7 @@ function countLetter (sentence, letter) {
 
 document.writeln(
   `Функция №1: ${getMaxDigit(468542341)}<br>
-  Функция №2: ${toUСFirst("maXiMuS")}<br>
+  Функция №2: ${formatName("maXiMuS")}<br>
   Функция №3: ${getRandomNumber(10, 100)}<br>
   Функция №4: ${getTax(1000, 19.5)}<br>
   Функция №5: ${getRandomPassword(5)}<br>
