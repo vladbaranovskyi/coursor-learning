@@ -1,28 +1,27 @@
-function getMaxDigit(n){
-  if(n <= 0) {
-    return 0;}
-  else{
-    return Math.max(n % 10, getMaxDigit(Math.floor(n/10)));
+function getMaxDigit (n) {
+  if (n <= 0) {
+    return 0;
+  } else {
+    return Math.max (n % 10, getMaxDigit(Math.floor (n/10)));
   }
 }
 
-function toUСFirst(name) {
-  name = name.toLowerCase()
-  return name[0].toUpperCase() + name.slice(1);
+function changeName (name) {
+  return  name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
 
-function getRandomNumber(minNumber, maxNumber) {
-  return  Math.floor (Math.random() * (maxNumber - minNumber) + 1);
+function getRandomNumber (minNumber, maxNumber) {
+  return  Math.floor (Math.random() * (maxNumber - minNumber) + minNumber);
 }
 
 function getTax (salary, tax) {
-  return  Math.floor (salary - (salary/100 * tax));
+  return  Math.floor(salary - (salary/100 * tax));
 }
 
 function getRandomPassword (n = 8) {
   let pas = '';
   for (let i = 0; i < n; i++) {
-    pas = pas + (Math.floor(Math.random() * 10));
+    pas = pas + (Math.floor (Math.random() * 10));
   }
   return pas;
 }
