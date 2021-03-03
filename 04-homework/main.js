@@ -37,14 +37,14 @@ console.log(averegeNumber);
 
 
 function filterEvenNumbers(randomArray) {
-  let resault = randomArray.filter((element)  => {
+  let result = randomArray.filter((element)  => {
 	if (element % 2 == 0) {
 		return false;
 	} else {
 		return true;
 	}
 });
-  return resault;
+  return result;
 }
 
 const evenNumbers = filterEvenNumbers(randomArray);
@@ -53,14 +53,14 @@ console.log(evenNumbers);
 
 
 function countPositiveNumbers(array) {
-  let resault = array.filter((element) => {
+  let result = array.filter((element) => {
 	if (element >  0) {
 		return true;
 	} else {
 		return false;
 	}
 });
-  return resault;
+  return result;
 }
 
 const positiveNumbers = countPositiveNumbers([-2, -3, 23, 49, -5, 1, -7, 11, 32]);
@@ -70,14 +70,14 @@ console.log(positiveNumbers);
 
 
 function getDividedByFive(randomArray) {
-  let resault = randomArray.filter((element) => {
+  let result = randomArray.filter((element) => {
 	if (element % 5  === 0) {
 		return true;
 	} else {
 		return false;
 	}
 });
-  return resault;
+  return result;
 }
 
 const dividedByFive = getDividedByFive(randomArray);
