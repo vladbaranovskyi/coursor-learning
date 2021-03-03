@@ -17,7 +17,7 @@ let half = Math.floor(numbers.length / 2);
 if (numbers.length % 2 === 1) {
       return numbers[half];
     } else {
-  return (numbers[half + 1] + numbers[numbers.length / 2]) / 2;
+  return (numbers[half-1] + numbers[half]) / 2;
   }
 }
 
