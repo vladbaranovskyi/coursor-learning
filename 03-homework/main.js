@@ -37,15 +37,16 @@ function getMarks (students, marks) {
 const studentsMarks =  getMarks (students, marks);
 
 
-function getMarksPairs (pairsTask, marks) {
+function getMarksPairs (pairsTask) {
   let marksPairs = [];
   for (var i = 0; i < pairsTask.length; i++) {
-    marksPairs.push([pairsTask[i], marks[i]]);
+    let marks = Math.floor(Math.random()*5)+1
+    marksPairs[i] = [pairsTask[i] + ", " + marks];
   }
   return marksPairs;
 }
 
-const marksPairs = getThemes (pairsTask, marks);
+const marksPairs = getMarksPairs (pairsTask);
 
 
 console.log (pairs);
