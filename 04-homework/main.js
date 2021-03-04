@@ -11,13 +11,20 @@ console.log(`Массив случайных чисел`);
 console.log(randomArray);
 
 
+function getInteger(number) {
+    if(Number.isInteger(number)) {
+        return number
+    }
+}
+
+
 function getMedian(numbers) {
 let half = Math.floor(numbers.length / 2);
-
-if (numbers.length % 2 === 1) {
-      return numbers[half];
+let intNumbers = numbers.filter(getInteger);
+ if (intNumbers.length % 2 === 1) {
+      return intNumbers[half];
     } else {
-  return (numbers[half-1] + numbers[half]) / 2;
+  return (intNumbers[half-1] + intNumbers[half]) / 2;
   }
 }
 
@@ -28,7 +35,7 @@ console.log(median);
 
 
 function getAverage(nums) {
-    return nums.reduce((sum, element) => Math.floor(sum + element), 0) / nums.length;
+    return nums.filter(getInteger).reduce((sum, element) => Math.floor(sum + element), 0) / nums.length;
 }
 
 const averegeNumber = getAverage(randomArray);
