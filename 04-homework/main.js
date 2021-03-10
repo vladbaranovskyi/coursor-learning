@@ -35,7 +35,9 @@ console.log(median);
 
 
 function getAverage(nums) {
-    return nums.filter(getInteger).reduce((sum, element) => Math.floor(sum + element), 0) / nums.length;
+    return nums
+    .filter(getInteger)
+    .reduce((sum, element) => Math.floor(sum + element), 0) / nums.length;
 }
 
 const averegeNumber = getAverage(randomArray);
