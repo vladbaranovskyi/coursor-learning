@@ -75,5 +75,6 @@ console.log(getStudentsNames(students));
 // Лучший сутдент
 
 function getBestStudent(students) {
-
+  
+}
 console.log(getBestStudent());
