@@ -2,7 +2,7 @@ const students = [{
   name: "Tanya",
   course: 3,
   subjects: {
-    math: [4, 4, 3, 4],
+    math: [4, 4, 3, 2],
     algorithms: [3, 3, 3, 4, 4, 4],
     data_science: [5, 5, 3, 4]
   }
@@ -75,6 +75,32 @@ console.log(getStudentsNames(students));
 // Лучший сутдент
 
 function getBestStudent(students) {
-  
+  let name = '';
+  let bestMark = 0;
+
+  students.forEach(
+    (student) => {
+    const mark = getAverageMark(student);
+    if (bestMark <= mark) {
+      name = student.name;
+    }
+  }
+);
+  return name;
 }
-console.log(getBestStudent());
+
+console.log(getBestStudent(students));
+
+
+// Подсчет букв
+
+function calculateWordLetters(testWord) {
+  let word = testWord.match(/\S/g);
+  let count = word.reduce((acc, char) => {
+    acc[char] = (acc[char] || 0) + 1;
+    return acc;
+  }, {});
+  return count
+}
+
+console.log(calculateWordLetters("тест"));
