@@ -3,8 +3,8 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 function getPairs (students) {
-  let studentsGirls = [students[2], students[3], students[5]];
-  let studentsBoys = [students[0], students[1], students[4]];
+  const studentsGirls = [students[2], students[3], students[5]];
+  const studentsBoys = [students[0], students[1], students[4]];
   let pairs = [];
  for (var i = 0; i < students.length/2; i++) {
   pairs.push([studentsGirls[i] + " та " + studentsBoys[i]]);
@@ -48,8 +48,11 @@ function getMarksPairs (pairsTask) {
 
 const marksPairs = getMarksPairs (pairsTask);
 
-
+console.log ('Student pairs:');
 console.log (pairs);
+console.log ('Student pairs with tasks:');
 console.log (pairsTask);
+console.log ('Students with marsk:');
 console.log (studentsMarks);
+console.log ('Rendom marks for students:');
 console.log (marksPairs);
