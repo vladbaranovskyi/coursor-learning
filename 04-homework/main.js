@@ -7,8 +7,7 @@ function getRandomArray(length, minNumber, maxNumber) {
 }
 
 const randomArray = getRandomArray(15, 1, 100)
-console.log(`Массив случайных чисел`);
-console.log(randomArray);
+console.log(`Массив случайных чисел`, randomArray);
 
 
 function getInteger(number) {
@@ -30,65 +29,40 @@ let intNumbers = numbers.filter(getInteger);
 
 
 const median = getMedian([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
-console.log(`Медиана массива`);
-console.log(median);
+console.log(`Медиана массива`, median);
 
 
 function getAverage(nums) {
     return nums
     .filter(getInteger)
-    .reduce((sum, element) => Math.floor(sum + element), 0) / nums.length;
+    .reduce((sum, element) => (sum + element), 0) / nums.length;
 }
 
 const averegeNumber = getAverage(randomArray);
-console.log(`Среднее арифметическое массива`);
-console.log(averegeNumber);
+console.log(`Среднее арифметическое массива`, averegeNumber);
 
 
 function filterEvenNumbers(randomArray) {
-  let result = randomArray.filter((element)  => {
-	if (element % 2 == 0) {
-		return false;
-	} else {
-		return true;
-	}
-});
-  return result;
+  return randomArray.filter(element => element % 2 === 0);
 }
 
 const evenNumbers = filterEvenNumbers(randomArray);
-console.log(`Массив без парных чисел`);
-console.log(evenNumbers);
+console.log(`Массив без парных чисел`, evenNumbers);
 
 
 function countPositiveNumbers(array) {
-  let result = array.filter((element) => {
-	if (element >  0) {
-		return true;
-	} else {
-		return false;
-	}
-});
-  return result;
+  let positiveNumbers = array.filter(element => element > 0);
+  return positiveNumbers.length
 }
 
 const positiveNumbers = countPositiveNumbers([-2, -3, 23, 49, -5, 1, -7, 11, 32]);
-console.log(`Массив где только позитивные числа`);
-console.log(positiveNumbers);
+console.log(`Массив где только позитивные числа`, positiveNumbers);
 
 
 
 function getDividedByFive(randomArray) {
-  let result = randomArray.filter((element) => {
-	if (element % 5  === 0) {
-		return true;
-	} else {
-		return false;
-	}
-});
-  return result;
+  return randomArray.filter(element => element % 5 === 0);;
 }
 
 const dividedByFive = getDividedByFive(randomArray);
-console.log(`Массив где все числа делятся на 5`);
-console.log(dividedByFive);
+console.log(`Массив где все числа делятся на 5`, dividedByFive);
