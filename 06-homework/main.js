@@ -39,8 +39,8 @@ function getMySalary(country) {
     mySalary.salary = Math.floor(Math.random() * (2000 - 1500)) + 1500;
     mySalary.taxes = Math.floor(mySalary.salary * country.tax);
     mySalary.profit = Math.floor(mySalary.salary - mySalary.taxes);
-    console.log('ЗП в Литве:', mySalary);
+    return (mySalary);
   }, 10000);
 }
 
-getMySalary(litva);
+console.log ('ЗП в Литве: ', getMySalary(litva));
