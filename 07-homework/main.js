@@ -7,6 +7,7 @@ class Student {
     this.marks = option.marks
   }
 
+
   get getInfo () {
     return `Студент ${this.course}-го курсу ${this.university}, ${this.fullName}`;
   }
@@ -24,7 +25,17 @@ class Student {
     }
   }
 
-  
+  get getAveregeMarks () {
+    return this.marks.reduce((sum, element) => (sum + element)) / this.marks.length;
+  }
+
+  dismis () {
+     this.marks = null;
+  }
+
+  recover () {
+     this.marks = [];
+  }
 }
 
 const student = new Student ({
@@ -34,8 +45,46 @@ const student = new Student ({
   marks: [5, 4, 4, 5]
 });
 
-
 console.log(student.getInfo);
 console.log(student.getMarks);
 student.setMarks = 5
 console.log(student.marks);
+console.log(student.getAveregeMarks);
+student.dismis()
+console.log(student.marks);
+student.recover()
+student.setMarks = 5
+student.setMarks = 4
+student.setMarks = 4
+student.setMarks = 5
+console.log(student.marks);
+
+
+
+class BudgetStudent extends Student {
+  constructor (option) {
+    super (option)
+    this.scholarship = option.scholarship
+  }
+
+  get scholarships () {
+    if (budgetStudent.getAveregeMarks > 4) {
+      return `${this.fullName} отрмав ${this.scholarship} стипендії`
+    }
+    else {
+      return `${this.fullName} не отрмав стипендію`
+    }
+  }
+}
+
+  const budgetStudent = new BudgetStudent (
+    {
+      university: `Гарвардський унiверситет`,
+      course: 4,
+      fullName: `Марк Цукерберг`,
+      marks: [5, 3, 4, 5],
+      scholarship: `1400$`
+    }
+  )
+
+setInterval(() => console.log(budgetStudent.scholarships), 10000);

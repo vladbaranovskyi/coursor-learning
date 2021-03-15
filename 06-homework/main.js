@@ -34,13 +34,11 @@ console.log ('Общее количество налогов в Литве: ', g
 // Пересчет ЗП с интервалом в 10 секунд
 
 function getMySalary(country) {
-  setInterval(() => {
-    const mySalary = {};
-    mySalary.salary = Math.floor(Math.random() * (2000 - 1500)) + 1500;
-    mySalary.taxes = Math.floor(mySalary.salary * country.tax);
-    mySalary.profit = Math.floor(mySalary.salary - mySalary.taxes);
-    return (mySalary);
-  }, 10000);
+  const mySalary = {};
+  mySalary.salary = Math.floor(Math.random() * (2000 - 1500)) + 1500;
+  mySalary.taxes = Math.floor(mySalary.salary * country.tax);
+  mySalary.profit = Math.floor(mySalary.salary - mySalary.taxes);
+  return (mySalary);
 }
 
-console.log ('ЗП в Литве: ', getMySalary(litva));
+setInterval(() => console.log('ЗП в Литве:', getMySalary(litva)), 10000);
