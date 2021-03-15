@@ -48,7 +48,7 @@ const student = new Student ({
 console.log(student.getInfo);
 console.log(student.getMarks);
 student.setMarks = 5
-console.log(student.marks);
+console.log(student.getMarks);
 console.log(student.getAveregeMarks);
 student.dismis()
 console.log(student.marks);
@@ -60,31 +60,32 @@ student.setMarks = 5
 console.log(student.marks);
 
 
+//Advanced
 
 class BudgetStudent extends Student {
   constructor (option) {
     super (option)
-    this.scholarship = option.scholarship
-  }
-
-  get scholarships () {
-    if (budgetStudent.getAveregeMarks > 4) {
-      return `${this.fullName} отрмав ${this.scholarship} стипендії`
+    this.scholarship = function getScholarship() {
+      if (budgetStudent.getAveregeMarks > 4) {
+        return `${this.fullName} отрмав 1400$ стипендії`
+      }
+      else if( this.marks === null){
+          console.log(`${this.fullName} покинув навчання, запустив Facebook та бiльше не отримує стипендію`);
+        }
+      else {
+        return `${this.fullName} не отрмав стипендію`
+        }
+      }
     }
-    else {
-      return `${this.fullName} не отрмав стипендію`
-    }
   }
-}
 
   const budgetStudent = new BudgetStudent (
     {
       university: `Гарвардський унiверситет`,
       course: 4,
       fullName: `Марк Цукерберг`,
-      marks: [5, 3, 4, 5],
-      scholarship: `1400$`
+      marks: [5, 3, 4, 5]
     }
   )
 
-setInterval(() => console.log(budgetStudent.scholarships), 10000);
+setInterval(() => console.log(budgetStudent.scholarship()), 30000);
