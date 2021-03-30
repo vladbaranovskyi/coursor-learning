@@ -64,7 +64,7 @@ class BudgetStudent extends Student {
     constructor(university, course, fullName, studentMarks, isStudent) {
         super(university, course, fullName, studentMarks, isStudent);
         this.getScholarship = function getScholarship() {
-            if(this.getAverageMark() >= 4 && this.isStudent === false) {
+            if(this.getAverageMark() >= 4 && !this.isStudent) {
                 console.log(`${this.fullName} отрмав 1400$ стипендії`)
             } else {
                 console.log(`${this.fullName} не отримав стипендію`);
