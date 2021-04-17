@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae6f3d24-3701-4c89-8cc7-102e6b80f4b9" name="Default Changelist" comment="" />
+    <list default="true" id="ae6f3d24-3701-4c89-8cc7-102e6b80f4b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../07-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-homework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-homework/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../07-homework/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-homework/main1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +33,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../07-homework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/index.html" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -44,6 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1616346140542</updated>
       <workItem from="1616346164527" duration="1969000" />
+      <workItem from="1617006842143" duration="1270000" />
+      <workItem from="1617008348975" duration="1305000" />
     </task>
     <servers />
   </component>

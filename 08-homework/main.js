@@ -1,89 +1,33 @@
-class Student {
-    constructor(university, course, fullName, studentMarks = [5, 4, 4, 5]) {
-        this.university = university;
-        this.course = course;
-        this.fullName = fullName;
-        this.studentMarks = studentMarks;
-    }
-    getInfo() {
-        return `Студент ${this.course}го курсу університету ${this.university}, ${this.fullName}`;
-    }
-    get marks() {
-        return this.studentMarks
-    }
-    set setMarks(mark) {
-        if(this.studentMarks != null || mark > 5) {
-            return this.studentMarks.push(mark);
-        }
-    }
-    getAverageMark() {
-        if(this.studentMarks != null) {
-            return this.studentMarks.reduce(getAverage, 0) / this.studentMarks.length;
-        }
-    }
-    dismiss() {
-        this.studentMarks = null;
-    }
-    recover() {
-        this.studentMarks = [];
-    }
+function resetPage() {
+  document.location.reload();
 }
 
-function getAverage(sum, current) {
-    return sum + current;
+function randomColor() {
+let rgb = [];
+
+for (let i = 0; i < 3; i++) {
+  rgb.push(Math.round(Math.random() * 255));
 }
 
-const student = new Student(
-    `Вищої Школи Психотерапії м. Одеса`,
-    1,
-    'Остап Бендер'
-);
-
-console.log(student.getInfo());
-console.log(student.marks);
-student.setMarks = 5;
-console.log(student.marks);
-console.log(student.getAverageMark());
-student.dismiss();
-student.setMarks = 5;
-console.log(student.marks);
-student.recover();
-student.setMarks = 5
-student.setMarks = 4
-student.setMarks = 4
-student.setMarks = 5
-console.log("Оцінки студента після відновлення:", student.marks);
-
-//Advanced
-
-class BudgetStudent extends Student {
-    constructor(university, course, fullName, studentMarks) {
-        super(university, course, fullName, studentMarks);
-        this.getScholarship = function getScholarship() {
-            if(this.getAverageMark() >= 4) {
-                console.log(`${this.fullName} отрмав 1400$ стипендії`)
-            } else if(this.studentMarks === null) {
-                console.log(`${this.fullName} покинув навчання, запустив Facebook та бiльше не отримує стипендію`);
-            } else {
-                console.log(`${this.fullName} не отрмав стипендію`);
-            }
-        }
-        setInterval(() => this.getScholarship(), 30000);
-    }
+return `rgb(${rgb.join(',')})`;
 }
 
-const budgetStudent = new BudgetStudent(
-    `Гарвардський унiверситет`,
-    4,
-    'Марк Цукерберг'
-);
+function generateBlocks() {
+  const container = document.createElement('div');
+  container.style.width = '250px';
+  container.style.height = '250px';
+  container.style.margin = '50px';
+  container.style.border = '2px solid black ';
+  document.body.append(container)
 
-budgetStudent.getScholarship();
-budgetStudent.dismiss();
-budgetStudent.getScholarship();
-budgetStudent.recover();
-student.setMarks = 5
-student.setMarks = 4
-student.setMarks = 4
-student.setMarks = 5
-budgetStudent.getScholarship();
+  for (var i = 0; i < 25; i++) {
+    const square = document.createElement('div');
+
+    square.style.width = '50px';
+    square.style.height = '50px';
+    square.style.float = "left";
+    square.style.backgroundColor = randomColor();
+
+    container.append(square);
+  }
+}
