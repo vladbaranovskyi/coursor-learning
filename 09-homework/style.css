@@ -1,0 +1,51 @@
+html {
+    font-size: 10px;
+    background: url("img/background.jpg") bottom center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    font: bold;
+    color: whitesmoke;
+    font-size: 3em;
+    text-shadow: 0 0 2em white;
+}
+
+.button {
+    border: 4px solid grey;
+    margin: 2em;
+    font-size: 1.2em;
+    width: 5em;
+    padding: 2em 2em;
+    border-radius: 15%;
+    text-align: center;
+    color: yellow;
+    text-shadow: 0 0 1em grey;
+    background: transparent;
+}
+
+.button:hover {
+    background: white;
+    opacity: .8;
+    transform: scale(1.1);
+    color: lightcoral;
+    text-shadow: 0 0 8px orangered;
+    border-color: navajowhite;
+    box-shadow: 0 0 1em #ffc600;
+}
+
+p {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
