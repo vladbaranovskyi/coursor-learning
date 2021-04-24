@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37ccd7bb-68f5-4580-afc0-70215f1248b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/11-homework/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11-homework/main-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,7 +71,24 @@
       <workItem from="1618935797387" duration="2329000" />
       <workItem from="1618943694266" duration="224000" />
       <workItem from="1618944196031" duration="593000" />
-      <workItem from="1618950669869" duration="4684000" />
+      <workItem from="1618950669869" duration="4889000" />
+      <workItem from="1619018214151" duration="100000" />
+      <workItem from="1619035840792" duration="89000" />
+      <workItem from="1619036001039" duration="640000" />
+      <workItem from="1619131332065" duration="1937000" />
+      <workItem from="1619175098196" duration="3000" />
+      <workItem from="1619176352536" duration="338000" />
+      <workItem from="1619178353479" duration="480000" />
+      <workItem from="1619199986049" duration="203000" />
+      <workItem from="1619200576325" duration="5092000" />
+      <workItem from="1619218336846" duration="407000" />
+      <workItem from="1619219669426" duration="3218000" />
+      <workItem from="1619273698869" duration="907000" />
+      <workItem from="1619274754678" duration="1825000" />
+      <workItem from="1619279851809" duration="1398000" />
+      <workItem from="1619286050479" duration="1267000" />
+      <workItem from="1619287713985" duration="890000" />
+      <workItem from="1619289757315" duration="1196000" />
     </task>
     <servers />
   </component>
@@ -92,10 +112,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1618775090255" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1618955292953">
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619221090614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1618955292953" />
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1619221090614" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1619221532588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619221532588" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1618950778018">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
