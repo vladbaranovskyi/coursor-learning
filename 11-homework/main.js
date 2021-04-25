@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+let currentPage = 1;
 
 //Characters
 
@@ -40,7 +41,7 @@ async function getCharacters() {
         })
 }
 
-document.getElementById("get-characters-btn").addEventListener("click", displayChracters, {once : true});
+document.getElementById("get-characters-btn").addEventListener("click", displayChracters);
 
 
 
@@ -76,7 +77,7 @@ async function getPlanets() {
         })
 }
 
-document.getElementById("get-planets-btn").addEventListener("click", displayPlanets, {once : true});
+document.getElementById("get-planets-btn").addEventListener("click", displayPlanets);
 
 
 
@@ -93,7 +94,6 @@ let displayNextPlanets = (event) => {
 
 
 async function nextPage() {
-        let currentPage = 1;
         if (currentPage < 6) {
             currentPage++
         let link = `https://swapi.dev/api/planets/?page=${currentPage}`
@@ -118,5 +118,5 @@ async function nextPage() {
 }
 
 
-document.getElementById("next-page").addEventListener("click", displayNextPlanets, {once : true});
+document.getElementById("next-page").addEventListener("click", displayNextPlanets);
 
