@@ -1,52 +1,15 @@
-document.getElementById("get-planets-btn").addEventListener("click", getPlanets, {once : true});
-document.getElementById("get-characters-btn").addEventListener("click", getCharacters, {once : true});
-// document.getElementById("next-page").addEventListener("click", nextPage, {once : true});
+const container = document.querySelector(".container");
 
-async function getPlanets() {
-    await axios.get ('https://swapi.dev/api/planets/')
-        .then((response) => {
-            const ObjectPlanets = response.data.results;
-            const planetsNames = ObjectPlanets.map((planet) => planet.name ).join("<br>");
-            const wrapPlanets = document.createElement('div')
-            wrapPlanets.className = "planets";
-            wrapPlanets.style.cssText = `
-            display: flex;
-            flex-direction: row;
-            margin: 10px;
-            color: white;
-            font-size: 20px;
-            flex-wrap: wrap;
-            padding: 15px;`;
-            wrapPlanets.innerHTML = planetsNames;
-            document.body.append(wrapPlanets);
-        })
-}
+//Characters
 
+let displayChracters = (event) => {
+    event.preventDefault();
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    getCharacters();
+};
 
-//
-// async function nextPage() {
-//     let currentPage = 1;
-//     if (currentPage < 6) {
-//         currentPage++
-//         await axios.get (`https://swapi.dev/api/planets/?page=${currentPage}`)
-//             .then((response) => {
-//                 const ObjectPlanets = response.data.results;
-//                 const planetsNames = ObjectPlanets.map((planet) => planet.name ).join("<br>");
-//                 const wrapPlanets = document.createElement('div')
-//                 wrapPlanets.className = "planets";
-//                 wrapPlanets.style.cssText = `
-//                     display: flex;
-//                     flex-direction: row;
-//                     margin: 10px;
-//                     color: white;
-//                     font-size: 20px;
-//                     flex-wrap: wrap;
-//                     padding: 15px;`;
-//                 wrapPlanets.innerHTML = planetsNames;
-//                 document.body.append(wrapPlanets);
-//             })
-//     }
-// }
 
 async function getCharacters() {
     await axios.get ('https://swapi.dev/api/films/1')
@@ -71,11 +34,89 @@ async function getCharacters() {
                             "Name: " + data.name + " |" +
                             " Birth date: " + data.birth_year + " |" +
                             " Gender: " + data.gender;
-                        document.body.append(wrapCharachter);
+                        container.append(wrapCharachter);
                     });
             }
         })
 }
 
+document.getElementById("get-characters-btn").addEventListener("click", displayChracters, {once : true});
 
+
+
+
+// Planets
+
+let displayPlanets = (event) => {
+    event.preventDefault();
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    getPlanets();
+};
+
+
+async function getPlanets() {
+    await axios.get ('https://swapi.dev/api/planets/')
+        .then((response) => {
+            const ObjectPlanets = response.data.results;
+            const planetsNames = ObjectPlanets.map((planet) => planet.name ).join("<br>");
+            const wrapPlanets = document.createElement('div')
+            wrapPlanets.className = "planets";
+            wrapPlanets.style.cssText = `
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            color: white;
+            font-size: 20px;
+            flex-wrap: wrap;
+            padding: 15px;`;
+            wrapPlanets.innerHTML = planetsNames;
+            container.append(wrapPlanets);
+        })
+}
+
+document.getElementById("get-planets-btn").addEventListener("click", displayPlanets, {once : true});
+
+
+
+//Next Page
+
+
+let displayNextPlanets = (event) => {
+    event.preventDefault();
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    nextPage();
+};
+
+
+async function nextPage() {
+        let currentPage = 1;
+        if (currentPage < 6) {
+            currentPage++
+        let link = `https://swapi.dev/api/planets/?page=${currentPage}`
+        await axios.get (link)
+            .then((response) => {
+                const ObjectPlanets = response.data.results;
+                const planetsNames = ObjectPlanets.map((planet) => planet.name ).join("<br>");
+                const wrapPlanets = document.createElement('div')
+                wrapPlanets.className = "planets";
+                wrapPlanets.style.cssText = `
+                    display: flex;
+                    flex-direction: row;
+                    margin: 10px;
+                    color: white;
+                    font-size: 20px;
+                    flex-wrap: wrap;
+                    padding: 15px;`;
+                wrapPlanets.innerHTML = planetsNames;
+                container.append(wrapPlanets);
+            })
+    }
+}
+
+
+document.getElementById("next-page").addEventListener("click", displayNextPlanets, {once : true});
 
