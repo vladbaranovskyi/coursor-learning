@@ -1,0 +1,30 @@
+html {
+    background: url("img/bg.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    max-height: 100%;
+}
+
+body h2 {
+    margin-left: 30px;
+    font-size: 30px;
+    height: 100%;
+}
+
+#next-page{
+    position: absolute;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: 2px solid orange;
+    background: navajowhite;
+    font-family: "Roboto Light";
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 30px;
+    color: darkslategrey;
+}
